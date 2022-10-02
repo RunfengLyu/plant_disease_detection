@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <viewController id="BVT-pH-1Xj" customClass="RecordSurfaceController" customModule="Chloris_AI" customModuleProvider="target">
+            <view key="view" contentMode="scaleToFill" id="emQ-y9-Szf">
+                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JMk-Y4-VH3">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="790"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XfN-CH-1Sl">
+                        <rect key="frame" x="165" y="798" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="VDM-iC-6ME"/>
+                        </constraints>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="filled" title="Button">
+                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="baseBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </buttonConfiguration>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="50"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="takePhoto" destination="BVT-pH-1Xj" eventType="touchUpInside" id="zxd-CH-m2r"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="oYp-sy-Mre"/>
+                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="XfN-CH-1Sl" firstAttribute="top" secondItem="JMk-Y4-VH3" secondAttribute="bottom" constant="8" symbolic="YES" id="8hl-fX-MWp"/>
+                    <constraint firstItem="XfN-CH-1Sl" firstAttribute="bottom" secondItem="oYp-sy-Mre" secondAttribute="bottom" id="DTl-Dw-8Bq"/>
+                    <constraint firstItem="XfN-CH-1Sl" firstAttribute="leading" secondItem="oYp-sy-Mre" secondAttribute="leading" constant="165" id="GQ4-hX-BGT"/>
+                    <constraint firstAttribute="trailing" secondItem="JMk-Y4-VH3" secondAttribute="trailing" id="MmY-0V-aOR"/>
+                    <constraint firstItem="oYp-sy-Mre" firstAttribute="trailing" secondItem="XfN-CH-1Sl" secondAttribute="trailing" constant="165" id="RUP-ar-7Pa"/>
+                    <constraint firstItem="JMk-Y4-VH3" firstAttribute="centerX" secondItem="XfN-CH-1Sl" secondAttribute="centerX" id="cOV-EH-cAJ"/>
+                    <constraint firstItem="JMk-Y4-VH3" firstAttribute="leading" secondItem="emQ-y9-Szf" secondAttribute="leading" id="iE9-gy-BCL"/>
+                    <constraint firstItem="JMk-Y4-VH3" firstAttribute="top" secondItem="emQ-y9-Szf" secondAttribute="top" id="whB-Gu-TBM"/>
+                </constraints>
+            </view>
+            <connections>
+                <outlet property="captureView" destination="JMk-Y4-VH3" id="mtK-7o-vlr"/>
+            </connections>
+            <point key="canvasLocation" x="-149.30232558139534" y="27.682403433476395"/>
+        </viewController>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
